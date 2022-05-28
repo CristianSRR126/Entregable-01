@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardQuotes {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0 #00000021;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  width: 700px;
+  height: 300px;
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.cardQuotes cite {
+  position: absolute;
+  right: 80px;
+  bottom: 50px;
+}
+
+.cardQuotes button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  font-size: 1em;
+  padding: 5px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cardQuotes button:active {
+  transform: translateY(2px);
+}
