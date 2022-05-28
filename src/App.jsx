@@ -111,34 +111,34 @@ const arrayOfColor = [
 
 function App() {
 
-  const createRandon = array => {
-    return Math.floor(Math.random() * array.length)
+  const numberRandon = randon => {
+    return Math.floor(Math.random() * randon.length)
   }
 
-  let numberRandonQuotes = createRandon(quotes)
-  let numberRandonColors = createRandon(arrayOfColor)
+  const getElementRando = randon => {
+    const i = numberRandon(randon)
+    return randon[i]
+  }
 
-  const [quotesRandon, setQuotesRandon] = useState(quotes[numberRandonQuotes])
-  const [colorsRandon, setColorsRandon] = useState(arrayOfColor[numberRandonColors])
+  const [quotesRandon, setQuotesRandon] = useState(getElementRando(quotes))
+  const [colorRandon, setColorRandon] = useState(getElementRando(arrayOfColor))
 
   const clickButton = () => {
-    setQuotesRandon(quotes[numberRandonQuotes])
-    setColorsRandon(arrayOfColor[numberRandonColors])
+    setQuotesRandon(getElementRando(quotes))
+    setColorRandon(getElementRando(arrayOfColor))
   }
 
   const appStyle = {
-    backgroundColor: colorsRandon
+    backgroundColor: colorRandon
   }
 
   return (
     <div className='App' style={appStyle}>
-
       <QuoteBox
-        quotesRandon={quotesRandon}
-        colorsRandon={colorsRandon}
-        clickButton={clickButton}
+      quotesRando={quotesRandon}
+      colorRando={colorRandon}
+      clickButton={clickButton}
       />
-
     </div>
   )
 }

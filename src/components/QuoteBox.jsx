@@ -1,16 +1,19 @@
 import React from 'react'
 
-const QuoteBox = ({ quotesRandon, colorsRandon, clickButton }) => {
+const QuoteBox = ({ quotesRando, colorRando, clickButton }) => {
+
+  const styleButton = {
+    backgroundColor: colorRando
+  }
 
   return (
-    <article className='cardQuotes' style={{ color: `${colorsRandon}` }}>
+    <article className='cardQuotes'>
 
-      <span>
-        <i className='bx bxs-quote-alt-left'></i> {quotesRandon.quote} <i className='bx bxs-quote-alt-right'></i>
-        <cite>- {quotesRandon.author}</cite>
+      <span style={{color: `${colorRando}`}}><i className='bx bxs-quote-alt-left'></i> {quotesRando.quote} <i className='bx bxs-quote-alt-right'></i>
+        <cite>- {quotesRando.author}</cite>
       </span>
 
-      <button style={{ backgroundColor: `${colorsRandon}` }} onClick={clickButton}>
+      <button style={styleButton} onClick={clickButton}>
         <i className='bx bxs-right-arrow' style={{ color: '#ffffff' }}></i>
       </button>
 
